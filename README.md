@@ -1,6 +1,6 @@
-# eat-da-burger
+# eat-da-burger (sequelize version)
 
-Created for a coding bootcamp assignment, it's a simple app that let's you create burgers and 'devour' them while persisting all data in a MySQL database. 
+Created for a coding bootcamp assignment, it's a simple app that let's you create burgers and 'devour' them while persisting all data in a MySQL database and using sequelize as an orm.
 
 ## Before You Begin
 
@@ -8,11 +8,13 @@ If running locally...
 
 - Run `npm install` as the app makes use of several npm packages.
 
-- Run the `db\schema.sql` and `db\seeds.sql` files to setup the `burgers_db` schema and necessary tables in your mysql environment. 
+- Run the `db\schema.sql` file to setup the `burgers_db` schema and necessary tables in your mysql environment. 
 
-- Edit the `config\connection.js` file to point to wherever your MySQL server is, and use credentials that have read/write privileges to the new `burgers_db` schema
+- Edit the 'development' entry in `config\config.json` file to point to wherever your MySQL server is, and use credentials that have read/write privileges to the new `burgers_db` schema
 
 - Run `node server.js` and open a browser to `localhost:3000`
+
+- For seed data run `sequelize db:seed:all`
 
 ## Instructions
 
