@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <img src="/assets/img/burger.gif" class="img-responsive" alt="burger">    
+    <h1 class="text-center">eat-da-burger!</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="text-center">burgers!</h1>
+      {{#each burgers}}
+        {{#unless devoured}}
+          <div class="row">
+            <div class="col-xs-9 burger text-center">
+              {{burger_name}} 
+            </div>
+	          <div class="col-xs-3">
+              <button class="btn btn-default devour" data-id="{{id}}">devour it!</button>
+            </div>
+	        </div>
+        {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col-sm-6">
+      <h1 class="text-center">devoured burgers!</h1>
+      {{#each burgers}}
+        {{#if devoured}}
+          <div class="row">
+            <div class="col-xs-12 burger text-center">
+              {{burger_name}} 
+            </div>
+	        </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="text-center">add-a-burger!</h1>
+    <form class="create-form">
+      <input type="text" class="form-control" id="bn" name="name">
+      <p class="text-center"><button class="btn btn-primary" type="submit">submit</button></p>
+    </form>
+  </div>
+</div>
