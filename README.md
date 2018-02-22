@@ -14,7 +14,9 @@ If running locally...
 
 - Run `node server.js` and open a browser to `localhost:3000`
 
-- For seed data run `sequelize db:seed:all`
+- For seed data run `sequelize db:seed:all` (this is assuming you have sequelize-cli and mysql2 installed globally)
+  - `npm install -g sequelize-cli`
+  - `npm install -g mysql2`
 
 ## Instructions
 
